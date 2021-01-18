@@ -1,0 +1,25 @@
+{
+  "name": "my-demo",
+  "version": "1.0.0",
+  "description": "react-project",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production --config ./src/webpack/webpack.config.js"
+  },
+  "repository": "https://github.com/coldblme/my-demo.git",
+  "author": "liuyi",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
+  }
+}
