@@ -1,11 +1,15 @@
 {
-  "name": "my-app",
+  "name": "my-demo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "找爆品 MVP lives in baopin-finder/. Root React17 demo is legacy.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --mode development"
+    "dev": "npm --prefix baopin-finder run dev",
+    "build": "npm --prefix baopin-finder run build",
+    "start": "npm --prefix baopin-finder run start",
+    "lint": "npm --prefix baopin-finder run lint",
+    "install:app": "npm --prefix baopin-finder install",
+    "legacy:start": "webpack-dev-server --open --mode development"
   },
   "keywords": [],
   "author": "",

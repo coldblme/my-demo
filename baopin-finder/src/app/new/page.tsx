@@ -1,5 +1,7 @@
 import { CandidateForm } from "@/components/CandidateForm";
 
+export const dynamic = "force-dynamic";
+
 export default function NewCandidatePage() {
   return (
     <div className="mx-auto max-w-2xl space-y-4">

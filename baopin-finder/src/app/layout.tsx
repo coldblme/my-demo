@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Noto_Sans_SC } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
 
 const notoSansSc = Noto_Sans_SC({
@@ -14,28 +13,36 @@ export const metadata: Metadata = {
   description: "拼多多百货爆品候选录入与列表（Slice A）",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="zh-CN" className={`${notoSansSc.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
         <header className="border-b border-border bg-card">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-            <Link href="/" className="text-lg font-semibold tracking-tight text-foreground">
+            <a
+              href="/"
+              className="text-lg font-semibold tracking-tight text-foreground"
+            >
               找爆品
-            </Link>
+            </a>
             <nav className="flex items-center gap-3 text-sm">
-              <Link
+              <a
                 href="/"
                 className="text-muted hover:text-foreground transition-colors"
               >
                 候选列表
-              </Link>
-              <Link
+              </a>
+              {/* 使用原生 <a>，避免部分环境下 App Router 客户端导航卡住 */}
+              <a
                 href="/new"
                 className="rounded-md bg-accent px-3 py-1.5 font-medium text-white hover:bg-accent-hover transition-colors"
               >
                 新建候选
-              </Link>
+              </a>
             </nav>
           </div>
         </header>

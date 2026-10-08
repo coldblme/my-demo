@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { listCandidates } from "@/lib/candidates";
 import {
   MARGIN_GUT_LABELS,
@@ -31,12 +30,12 @@ function CandidateTable({ rows }: { rows: Candidate[] }) {
     return (
       <div className="rounded-lg border border-dashed border-border bg-card px-6 py-12 text-center">
         <p className="text-sm text-muted">还没有候选。先录入一条吧。</p>
-        <Link
+        <a
           href="/new"
           className="mt-4 inline-block rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-accent-hover"
         >
           新建候选
-        </Link>
+        </a>
       </div>
     );
   }
@@ -114,12 +113,12 @@ export default function HomePage() {
             按录入时间倒序 · 共 {rows.length} 条
           </p>
         </div>
-        <Link
+        <a
           href="/new"
           className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-accent-hover"
         >
           新建候选
-        </Link>
+        </a>
       </div>
       <CandidateTable rows={rows} />
     </div>
