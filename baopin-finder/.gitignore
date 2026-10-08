@@ -43,3 +43,6 @@ next-env.d.ts
 # local sqlite
 /data/*.db
 /data/*.db-*
+
+# next-generated agent rules
+AGENTS.md
